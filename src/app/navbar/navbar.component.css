@@ -1,0 +1,28 @@
+.navbar{
+    
+    background-color: #234E70;
+    
+}
+
+.navbar-toggler{
+    color:#FBF8BE ;
+    /* background-color: #FBF8BE; */
+}
+
+.navbar-toggler-icon{
+    color:#FBF8BE ;
+     background-color: #FBF8BE;
+}
+
+.nav-link{
+    color:#FBF8BE;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+}
+
+.navbar-brand{
+    color:#FBF8BE;
+    font-family:cursive;
+    font-style: italic;
+    font-size: 1.5em;
+}

@@ -1,0 +1,26 @@
+footer{
+    margin-top: 60px;
+height: 18%;
+background-color: #FBF8BE;
+width: 100%;
+position: absolute;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+li{
+    list-style-type: none;
+    padding: 5px;
+}
+
+a{
+    text-decoration: none;
+    color:#234E70 ;
+    font-size: larger;
+}
+p{
+    float: right;
+}
