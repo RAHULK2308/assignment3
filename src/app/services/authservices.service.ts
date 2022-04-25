@@ -20,7 +20,11 @@ export class AuthservicesService {
     return this.http.post(" https://hiring-stackroots-server.herokuapp.com/auth/signout/user",{})
   }
 
-  getToken(){
+  userLogged(){
     return !!localStorage.getItem('token')
+  }
+
+  getToken(){
+    return localStorage.getItem('token')
   }
 }

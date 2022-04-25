@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule,HTTP_INTERCEPTORS} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { SigninComponent } from './signin/signin.component';
@@ -14,6 +14,11 @@ import { FooterComponent } from './footer/footer.component';
 
 import { Router } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { AuthservicesService } from './services/authservices.service';
+import { TokenInterceptorService } from './token-interceptor.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
@@ -29,9 +34,15 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi: true,
+  },
+  AuthservicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

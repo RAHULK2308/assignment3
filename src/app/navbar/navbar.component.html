@@ -7,9 +7,9 @@
       <div class="collapse navbar-collapse justify-content-end " id="navbarNavAltMarkup" >
         <div class="navbar-nav " >
           <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
-          <a class="nav-link" routerLink="signin" *ngIf="!auth.getToken()">SignIn</a>
-          <a class="nav-link" routerLink="signup" *ngIf="!auth.getToken()">SignUp</a>
-          <a class="nav-link " routerLink="#" *ngIf=auth.getToken() (click)="logout()" >Logout</a>
+          <a class="nav-link" routerLink="signin" *ngIf="!auth.userLogged()">SignIn</a>
+          <a class="nav-link" routerLink="signup" *ngIf="!auth.userLogged()">SignUp</a>
+          <a class="nav-link " routerLink="#" *ngIf=auth.userLogged() (click)="logout()" >Logout</a>
         </div>
       </div>
     </div>

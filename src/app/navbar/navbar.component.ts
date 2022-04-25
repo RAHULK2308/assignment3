@@ -16,6 +16,14 @@ export class NavbarComponent implements OnInit {
   }
 
   logout(){
+    this.auth.logout().subscribe(
+      (res)=>{
+        console.log(res)
+      },
+      (err)=>{
+        console.log(err)
+      }
+    )
     localStorage.removeItem("token")
     this.router.navigate(['/'])
   }
